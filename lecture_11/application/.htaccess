@@ -1,0 +1,10 @@
+RewriteEngine on
+
+Options -Indexes
+RewriteBase /mg_academy/mg-academy-lectures/lecture_11/application/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|backend\.php|images|css|img|js|robots\.txt|favicon\.ico)
+
+RewriteRule ^(.*)$ ./index.php?$1 [L]

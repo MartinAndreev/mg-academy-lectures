@@ -1,0 +1,17 @@
+{
+    "name": "martin.andreev/com.mgacademy.lectures.framework",
+    "description": "This is a really simple framework, used to show how to create a simple mvc framework and how to work with OOP php",
+    "license": "GPU",
+    "authors": [
+        {
+            "name": "Martin Andreev",
+            "email": "marto@www-you.com"
+        }
+    ],
+    "require": {
+        "catfan/Medoo": "^1.5",
+        "symfony/http-foundation": "^3.4",
+        "adbario/php-dot-notation": "^2.0",
+        "twig/twig": "^2.0"
+    }
+}
