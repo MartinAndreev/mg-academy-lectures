@@ -139,10 +139,11 @@ class Loader {
 
         $loader->registerNamespaces([
             'System\\Core' => SYSTEM_PATH . 'core/',
+            'System\\Core\\Interfaces' => SYSTEM_PATH . 'core/interfaces/',
             'Application' => APP_PATH,
             'Application\\Controllers' => APP_PATH . 'controllers/',
             'Application\\Models' => APP_PATH . 'models/',
-            'Application\\Libraires' => APP_PATH . 'libraries/',
+            'Application\\Libraries' => APP_PATH . 'libraries/',
             'Application\\Helpers' => APP_PATH . 'helpers/',
         ]);
 

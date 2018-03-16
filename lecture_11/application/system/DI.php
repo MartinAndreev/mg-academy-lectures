@@ -29,12 +29,6 @@ class DI {
      */
     protected $_di = [];
 
-    /**
-     *
-     * @var Dispatcher
-     */
-    protected $_dispatcher = null;
-
     protected function __construct() {
         
     }

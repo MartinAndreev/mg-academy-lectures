@@ -9,7 +9,17 @@ if (!defined('ROOT_PATH')) {
 class Index_Controller extends \System\Core\Controller {
 
     function indexAction() {
-        return $this->view->display('index.twig');
+        $book = new \Application\Models\Book();
+        $book->find('5');
+        $book->set('book', 'Test');
+        $book->set('isbn', 'asada');
+        $book->set('author', 'asdadasd');
+        $book->set('user_id', '1');
+        $book->save();
+    }
+
+    function testAction() {
+        
     }
 
 }

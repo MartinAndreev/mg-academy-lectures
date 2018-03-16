@@ -58,13 +58,24 @@ $di->set('view', function() {
 });
 
 $di->set('uri', function() use ($di) {
-    return new System\Core\Uri($di);
+    $uri = new System\Core\Uri();
+    $uri->setDI($di);
+    $uri->init();
+
+    return $uri;
 }, true);
 
 $di->set('dispatcher', function() use ($di) {
     $di->config->load('routing');
 
     return new System\Core\Dispatcher($di);
+}, true);
+
+$di->set('session', function() use ($di) {
+    $session = new System\Core\Session();
+    $session->setDI($di);
+
+    return $session;
 }, true);
 
 $di->dispatcher->dispatch();

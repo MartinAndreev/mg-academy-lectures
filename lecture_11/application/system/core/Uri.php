@@ -14,16 +14,18 @@ if (!defined('ROOT_PATH')) {
  * @since 1.0
  * @package com.mgacademy.lectures.framework
  */
-class Uri {
+class Uri implements Interfaces\DIInjectable {
 
     protected $_protocol = '';
     protected $_segments = [];
     protected $_di = null;
     protected $_baseUrl = '';
 
-    function __construct(\System\DI $di) {
-        $this->_di = $di;
+    function __construct() {
+        
+    }
 
+    function init() {
         $this->_protocol = ($this->_di->config->get('config.url_protocol')) ? $this->_di->config->get('config.url_protocol') : 'QUERY_STRING';
         $this->_loadSegments();
         $this->_setBaseUrl();
@@ -59,7 +61,7 @@ class Uri {
         } else {
             $this->_baseUrl = sprintf(
                     "%s://%s%s", isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http', $_SERVER['SERVER_NAME'], $_SERVER['REQUEST_URI']);
-            
+
             $this->_baseUrl = str_replace(implode('/', $this->_segments), '', $this->_baseUrl);
         }
     }
@@ -83,6 +85,14 @@ class Uri {
         }
 
         return $this->getBaseUrl() . $segments;
+    }
+
+    public function getDI() {
+        return $this->_di;
+    }
+
+    public function setDI(\System\DI $di) {
+        $this->_di = $di;
     }
 
 }

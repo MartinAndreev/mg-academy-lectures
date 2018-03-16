@@ -22,7 +22,7 @@ class __TwigTemplate_158446a3693ff5a9c6deaddb2fc29d61506aa16172e2c15327afa62a90c
         // line 1
         echo "<html>
     <body>
-        asdas asdas dasd asdsa
+
     </body>
 </html>";
     }
