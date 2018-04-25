@@ -1,0 +1,93 @@
+#login-form, #register-form {
+    margin-top: 40px;
+}
+
+#forgotten-password {
+    margin-right: 10px;
+}
+
+.panel.panel-default .panel-heading {
+    border-left: none; border-right: none; border-top: none;
+}
+
+#footer {
+    border-top: 1px solid #e7e7e7; margin-top: 20px; padding-top: 10px;
+}
+
+.page-header {
+    margin-top: 0px;
+}
+.page-header h1 {
+    margin-top: 0px; margin-bottom: 0px;
+}
+
+.pagination {
+    margin: 0px;
+}
+
+.control-label.control-label-sm {
+    padding-top: 4px;
+}
+
+sup.required {
+    color: #ff0039;
+}
+
+.control-label-block {
+    display: block;
+}
+
+.datepicker {
+    border-radius: 0px;
+}
+
+#document-total-wrapper th {
+    width: 60%; vertical-align: middle;
+}
+
+#document-total-wrapper td {
+    vertical-align: middle;
+}
+
+#document-goods thead th {
+    text-align: center; vertical-align: middle;
+}
+
+.goods-row .goods-row-quantity input,
+.goods-row .goods-row-price input,
+.goods-row .goods-row-discount-ammount input,
+.goods-row .goods-row-discount-percent input {
+    text-align: right;
+}
+
+.goods-row .goods-row-discount-percent {
+    width: 100px;
+}
+
+.goods-row .goods-row-discount-ammount {
+    width: 150px;
+}
+
+.goods-row .goods-row-quantity {
+    width: 100px;
+}
+
+.goods-row .goods-row-quantity input {
+    text-align: center;
+}
+
+.goods-row .goods-row-price {
+    width: 150px;
+}
+
+.goods-row td, .goods-row th {
+    vertical-align: middle !important;
+}
+
+.goods-row .goods-row-actions {
+    text-align: center;
+}
+
+.goods-row .goods-row-total {
+    width: 150px; text-align: right;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Documents application</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/plugins/datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">iFaktura</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="index.html">
+                        Dashboard <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Documents <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Invoice</a>
+                        </li>
+                        <li>
+                            <a href="#">Credit note</a>
+                        </li>
+                        <li>
+                            <a href="#">Debit note</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Nomenclatures <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Suppliers</a>
+                        </li>
+                        <li>
+                            <a href="#">Contragents</a>
+                        </li>
+                        <li>
+                            <a href="#">Goods</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        Profile <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Profile</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header clearfix">
+                <h1 class="pull-left">
+                    Create an invoice
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <form action="" method="post" class="">
+        <div class="row">
+            <div class="col-md-5 form-horizontal">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Customer info
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="customer-name-input" class="col-sm-4 control-label control-label-sm">
+                                Name <sup class="required">*</sup>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="customer-name-input"
+                                       name="customer[name]"
+                                       placeholder="Enter name for autocomplete">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-vat-input" class="col-sm-4 control-label control-label-sm">
+                                VAT <sup class="required">*</sup>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="customer-vat-input"
+                                       name="customer[name]"
+                                       placeholder="Enter name for autocomplete">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-city-input" class="col-sm-4 control-label control-label-sm">
+                                City <sup class="required">*</sup>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="customer-city-input"
+                                       name="customer[city]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-country-input" class="col-sm-4 control-label control-label-sm">
+                                Country
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="customer-country-input"
+                                       name="customer[country]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-address-input" class="col-sm-4 control-label control-label-sm">
+                                Address
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="customer-address-input"
+                                       name="customer[address]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-mol-input" class="col-sm-4 control-label control-label-sm">
+                                MOL
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="customer-mol-input"
+                                       name="customer[mol]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Invoice info
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="invoice-number-input"
+                                   class="control-label control-label-block text-center control-label-sm">
+                                #
+                            </label>
+                            <input type="text" class="form-control input-sm text-center" disabled
+                                   id="invoice-number-input" placeholder="***********"
+                                   name="invoice_number">
+                        </div>
+                        <div class="form-group">
+                            <label for="invoice-date-input"
+                                   class="control-label control-label-block text-center control-label-sm">
+                                Document date
+                            </label>
+                            <input type="text" class="form-control input-sm datepicker text-center" readonly
+                                   id="invoice-date-input"
+                                   name="invoice_number">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 form-horizontal">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Supplier info
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="supplier-name-input" class="col-sm-4 control-label control-label-sm">
+                                Name <sup class="required">*</sup>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="supplier-name-input"
+                                       name="supplier[name]"
+                                       placeholder="Enter name for autocomplete">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="supplier-vat-input" class="col-sm-4 control-label control-label-sm">
+                                VAT <sup class="required">*</sup>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="supplier-vat-input"
+                                       name="supplier[name]"
+                                       placeholder="Enter name for autocomplete">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="supplier-city-input" class="col-sm-4 control-label control-label-sm">
+                                City <sup class="required">*</sup>
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="supplier-city-input"
+                                       name="supplier[city]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="supplier-country-input" class="col-sm-4 control-label control-label-sm">
+                                Country
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="supplier-country-input"
+                                       name="supplier[country]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="supplier-address-input" class="col-sm-4 control-label control-label-sm">
+                                Address
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="supplier-address-input"
+                                       name="supplier[address]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="supplier-mol-input" class="col-sm-4 control-label control-label-sm">
+                                MOL
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control input-sm" id="supplier-mol-input"
+                                       name="supplier[mol]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Document rows
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered" id="document-goods">
+                            <thead>
+                            <tr>
+                                <th rowspan="2">
+                                    #
+                                </th>
+                                <th rowspan="2">
+                                    Good
+                                </th>
+                                <th rowspan="2">
+                                    Quantity
+                                </th>
+                                <th rowspan="2">
+                                    Single price
+                                </th>
+                                <th colspan="2">
+                                    Discount
+                                </th>
+                                <th rowspan="2">
+                                    Total
+                                </th>
+                                <th rowspan="2"></th>
+                            </tr>
+                            <tr>
+                                <th>%</th>
+                                <th>Fixed</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="goods-row">
+                                <td class="goods-row-number">
+                                    1
+                                </td>
+                                <td class="goods-row-goods">
+                                    <input type="text" class="form-control input-sm goods-autocomplete"
+                                           name="goods[##][name]"
+                                           placeholder="Enter a goods name or sku for autocomplete">
+                                </td>
+                                <td class="goods-row-quantity">
+                                    <input type="text" class="form-control input-sm" name="goods[##][quantity]"
+                                           value="0">
+                                </td>
+                                <td class="goods-row-price">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm" name="goods[##][price]"
+                                               value="0">
+                                        <span class="input-group-addon">BGN</span>
+                                    </div>
+                                </td>
+                                <td class="goods-row-discount-percent">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm"
+                                               name="goods[##][discount_percent]"
+                                               value="0">
+                                        <span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td class="goods-row-discount-ammount">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm"
+                                               name="goods[##][discount_ammount]"
+                                               value="0">
+                                        <span class="input-group-addon">BGN</span>
+                                    </div>
+                                </td>
+                                <th class="goods-row-total">
+                                    <span>0</span> BGN
+                                </th>
+                                <th class="goods-row-actions">
+                                    <button class="btn btn-danger goods-row-remove-row btn-xs" type="button">
+                                        <i class="fa fa-remove"></i>
+                                    </button>
+                                </th>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="8">
+                                        <button type="button" class="btn btn-primary btn-xs">
+                                            <i class="fa fa-plus"></i> Add row
+                                        </button>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 pull-right">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Document totals
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered" id="document-total-wrapper">
+                            <tr>
+                                <th class="text-right">
+                                    Vat %
+                                </th>
+                                <td class="text-right">
+                                    <select id="document-total-vat-percent" class="form-control input-sm"
+                                            name="vat_percent">
+                                        <option value="9">0%</option>
+                                        <option value="9">9%</option>
+                                        <option value="20" selected>20%</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-right">
+                                    Vat
+                                </th>
+                                <td class="text-right">
+                                    <span id="document-total-vat">0</span> BGN
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-right">
+                                    Total without vat
+                                </th>
+                                <td class="text-right">
+                                    <span id="document-total-no-vat">0</span> BGN
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-right">
+                                    Total
+                                </th>
+                                <td class="text-right">
+                                    <span id="document-total">0</span> BGN
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<footer id="footer">
+    <div class="container text-center">
+        Copyright &copy; 2019
+    </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/js/documents.js"></script>
+</body>
+</html>
