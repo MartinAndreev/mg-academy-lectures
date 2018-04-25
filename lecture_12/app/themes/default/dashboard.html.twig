@@ -1,0 +1,151 @@
+{% extends _layout %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Documents statistics
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>
+                                    Invoice documents
+                                </th>
+                                <td class="text-right">
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Credit note documents
+                                </th>
+                                <td class="text-right">
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Debit note documents
+                                </th>
+                                <td class="text-right">
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Suppliers
+                                </th>
+                                <td class="text-right">
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Customers
+                                </th>
+                                <td class="text-right">
+                                    0
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Goods
+                                </th>
+                                <td class="text-right">
+                                    0
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            System messages
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <p>
+                                Lorem impsum
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">
+                            Last documents
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        Contragent
+                                    </th>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th class="text-right">
+                                        # of goods
+                                    </th>
+                                    <th class="text-right">
+                                        Vat Total
+                                    </th>
+                                    <th class="text-right">
+                                        Total
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        100010001
+                                    </td>
+                                    <td>
+                                        Demo Customer 1
+                                    </td>
+                                    <td>
+                                        10.10.2018
+                                    </td>
+                                    <td>
+                                        invoice
+                                    </td>
+                                    <td class="text-right">
+                                        4
+                                    </td>
+                                    <td class="text-right">
+                                        25.30 BGN
+                                    </td>
+                                    <td class="text-right">
+                                        160.00 BGN
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

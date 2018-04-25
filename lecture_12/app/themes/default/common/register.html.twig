@@ -1,0 +1,71 @@
+{% extends _layout %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+
+                <h2>Register</h2>
+
+                <form method="post" action="">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Register your account.
+                            </h2>
+                        </div>
+                        <div class="panel-body text-left">
+                            <div class="form-group">
+                                <label for="name" class="control-label ">
+                                    Name *
+                                </label>
+                                <input value="{{ form_data.name }}" type="text" class="form-control" name="name" required="" id="name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="control-label">
+                                    Lastname *
+                                </label>
+                                <input value="{{ form_data.lastname }}" type="text" class="form-control" name="lastname" required="" id="lastname" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-label">
+                                    Email *
+                                </label>
+                                <input value="{{ form_data.email }}" type="text" class="form-control" name="email" required="" id="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">
+                                    Password *
+                                </label>
+                                <input type="password" class="form-control" name="password" id="password" />
+                            </div>
+                            <div class="form-group">
+                                <label  for="password-confirm" class="control-label">
+                                    Confirm Password *
+                                </label>
+                                <input type="password" class="form-control" name="password-confirm" id="password-confirm" />
+                            </div>
+                        </div>
+                        <div class="panel-footer text-right">
+                            <button type="submit" class="btn btn-primary">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+
+                    {% if errors %}
+                        <div class="alert alert-danger">
+                            {% for error in errors %}
+                                <p>
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

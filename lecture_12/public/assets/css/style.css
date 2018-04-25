@@ -1,0 +1,165 @@
+#login-form, #register-form {
+    margin-top: 40px;
+}
+
+#forgotten-password {
+    margin-right: 10px;
+}
+
+.panel.panel-default .panel-heading {
+    border-left: none; border-right: none; border-top: none;
+}
+
+#footer {
+    border-top: 1px solid #e7e7e7; margin-top: 20px; padding-top: 10px;
+}
+
+.page-header {
+    margin-top: 0px;
+}
+.page-header h1 {
+    margin-top: 0px; margin-bottom: 0px;
+}
+
+.pagination {
+    margin: 0px;
+}
+
+.control-label.control-label-sm {
+    padding-top: 4px;
+}
+
+sup.required {
+    color: #ff0039;
+}
+
+.control-label-block {
+    display: block;
+}
+
+.datepicker {
+    border-radius: 0px;
+}
+
+#document-total-wrapper th {
+    width: 60%; vertical-align: middle;
+}
+
+#document-total-wrapper td {
+    vertical-align: middle;
+}
+
+#document-goods thead th {
+    text-align: center; vertical-align: middle;
+}
+
+.goods-row .goods-row-quantity input,
+.goods-row .goods-row-price input,
+.goods-row .goods-row-discount-ammount input,
+.goods-row .goods-row-discount-percent input {
+    text-align: right;
+}
+
+.goods-row .goods-row-discount-percent {
+    width: 100px;
+}
+
+.goods-row .goods-row-discount-ammount {
+    width: 150px;
+}
+
+.goods-row .goods-row-quantity {
+    width: 100px;
+}
+
+.goods-row .goods-row-quantity input {
+    text-align: center;
+}
+
+.goods-row .goods-row-price {
+    width: 150px;
+}
+
+.goods-row td, .goods-row th {
+    vertical-align: middle !important;
+}
+
+.goods-row .goods-row-actions {
+    text-align: center;
+}
+
+.goods-row .goods-row-total {
+    width: 150px; text-align: right;
+}
+
+.wcms-table-listing-form.table-sorting .sorting{background: url('../img/datatable/sort_both.png') no-repeat center right; cursor: pointer;}
+.wcms-table-listing-form.table-sorting .sorting_asc{background: url('../img/datatable/sort_asc.png') no-repeat center right; cursor: pointer;}
+.wcms-table-listing-form.table-sorting .sorting_desc{background: url('../img/datatable/sort_desc.png') no-repeat center right; cursor: pointer;}
+.wcms-table-listing-form.table-sorting .sorting_asc_disabled{background: url('../img/datatable/sort_asc_disabled.png') no-repeat center right;}
+.wcms-table-listing-form.table-sorting .sorting_desc_disabled{background: url('../img/datatable/sort_desc_disabled.png') no-repeat center right;}
+
+.wcms-table-listing-form.table-sorting thead th a.sorting{
+    color: #666; display: block; text-decoration: none; background: none;
+}
+
+.wcms-table-listing-form.table-sorting thead th.sorted {
+    background-color: #eee;
+}
+
+.wcms-table-listing-form .wcms-per-page-wrap {
+    max-width: 30%; box-sizing: border-box; padding: 5px; float: left;
+}
+
+.wcms-table-listing-form .wcms-per-page-wrap label {
+    font-size: 12px; font-weight: normal;
+}
+
+.wcms-table-listing-form .wcms-per-page-wrap select {
+    width: 60px; display: inline-block; margin-left: 10px; padding: 2px 6px; height: 24px; box-sizing: border-box;
+}
+
+.wcms-table-listing-form .wcms-listing-table thead input, .wcms-table-listing-form .wcms-listing-table thead select {
+    font-size: 12px; font-weight: normal; padding: 4px; height: 24px;
+}
+
+.wcms-table-listing-form .wcms-pagination .pagination {
+    margin: 0px; margin-top: 5px; margin-bottom: 5px; margin-right: 10px; padding-top: 2px;
+}
+
+.wcms-table-listing-form .wcms-pagination {
+    height: 39px; box-sizing: border-box; float: right;
+}
+
+.wcms-table-listing-form .wcms-table-shown {
+    float: left; padding: 5px; font-size: 12px; color: #999; padding-left: 10px; padding-top: 8px; float: right; margin-right: 20px;
+}
+
+.wcms-table-listing-form .wcms-bulk-actions {
+    float: left; min-width: 240px; padding: 5px;
+}
+
+.wcms-table-listing-form .wcms-bulk-actions select {
+    max-width: 160px; height: 24px; font-weight: normal; padding: 3px; font-size: 12px;
+    display: inline-block;
+}
+
+
+.wcms-table-listing-form .wcms-bulk-actions button {
+    font-weight: normal; padding: 2px; font-size: 12px; padding-left: 6px; padding-right: 6px;
+}
+
+.wcms-filter_button {
+    float: right; max-width: 200px; margin-top: 5px; margin-right: 10px;
+}
+
+.wcms-table-actions .action-button {
+    padding: 1px 5px;
+}
+
+.wcms-table-listing-form tr.default-language td {
+    background: #dff0d8 !important;
+}
+
+.wcms-table-listing-form .wcms-table-actions .dropdown-menu {
+    left: auto; right: 0px;
+}
