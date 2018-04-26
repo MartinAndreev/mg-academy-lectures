@@ -110,7 +110,7 @@
         </div>
     </div>
 
-    <form action="" method="post" class="">
+    <form action="" method="post" class="" id="document-form">
         <div class="row">
             <div class="col-md-5 form-horizontal">
                 <div class="panel panel-default">
@@ -285,7 +285,7 @@
                         </h2>
                     </div>
                     <div class="panel-body">
-                        <table class="table table-bordered" id="document-goods">
+                        <table class="table table-bordered document-goods-row" id="document-goods">
                             <thead>
                             <tr>
                                 <th rowspan="2">
@@ -314,22 +314,27 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr class="goods-row">
+                            <tr class="goods-row goods-initial-row">
                                 <td class="goods-row-number">
-                                    1
+                                    <span class="badge">1</span>
                                 </td>
                                 <td class="goods-row-goods">
-                                    <input type="text" class="form-control input-sm goods-autocomplete"
-                                           name="goods[##][name]"
+                                    <input type="hidden"
+                                           name="goods[##][id]" class="goods-row-id-input">
+                                    <input type="text" class="form-control input-sm goods-autocomplete goods-row-name-input"
+                                           name="goods[##][name]" tabindex="30"
                                            placeholder="Enter a goods name or sku for autocomplete">
                                 </td>
                                 <td class="goods-row-quantity">
-                                    <input type="text" class="form-control input-sm" name="goods[##][quantity]"
+                                    <input type="text" class="form-control input-sm"
+                                           tabindex="31"
+                                           name="goods[##][quantity]"
                                            value="0">
                                 </td>
                                 <td class="goods-row-price">
                                     <div class="input-group input-group-sm">
                                         <input type="text" class="form-control input-sm" name="goods[##][price]"
+                                               tabindex="32"
                                                value="0">
                                         <span class="input-group-addon">BGN</span>
                                     </div>
@@ -337,6 +342,7 @@
                                 <td class="goods-row-discount-percent">
                                     <div class="input-group input-group-sm">
                                         <input type="text" class="form-control input-sm"
+                                               tabindex="33"
                                                name="goods[##][discount_percent]"
                                                value="0">
                                         <span class="input-group-addon">%</span>
@@ -345,7 +351,60 @@
                                 <td class="goods-row-discount-ammount">
                                     <div class="input-group input-group-sm">
                                         <input type="text" class="form-control input-sm"
+                                               tabindex="34"
                                                name="goods[##][discount_ammount]"
+                                               value="0">
+                                        <span class="input-group-addon">BGN</span>
+                                    </div>
+                                </td>
+                                <th class="goods-row-total">
+                                    <span>0</span> BGN
+                                </th>
+                                <th class="goods-row-actions">
+                                    <button class="btn btn-danger goods-row-remove-row btn-xs" type="button">
+                                        <i class="fa fa-remove"></i>
+                                    </button>
+                                </th>
+                            </tr>
+                            <tr class="goods-row">
+                                <td class="goods-row-number">
+                                    <span class="badge">1</span>
+                                </td>
+                                <td class="goods-row-goods">
+                                    <input type="hidden"
+                                           name="goods[0][id]" class="goods-row-id-input">
+                                    <input type="text" class="form-control input-sm goods-autocomplete goods-row-name-input"
+                                           name="goods[0][name]" tabindex="30"
+                                           placeholder="Enter a goods name or sku for autocomplete">
+                                </td>
+                                <td class="goods-row-quantity">
+                                    <input type="text" class="form-control input-sm"
+                                           tabindex="31"
+                                           name="goods[0][quantity]"
+                                           value="10">
+                                </td>
+                                <td class="goods-row-price">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm" name="goods[##][price]"
+                                               tabindex="32"
+                                               value="14.8945">
+                                        <span class="input-group-addon">BGN</span>
+                                    </div>
+                                </td>
+                                <td class="goods-row-discount-percent">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm"
+                                               tabindex="33"
+                                               name="goods[0][discount_percent]"
+                                               value="0">
+                                        <span class="input-group-addon">%</span>
+                                    </div>
+                                </td>
+                                <td class="goods-row-discount-ammount">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control input-sm"
+                                               tabindex="34"
+                                               name="goods[0][discount_ammount]"
                                                value="0">
                                         <span class="input-group-addon">BGN</span>
                                     </div>
@@ -363,7 +422,7 @@
                             <tfoot>
                                 <tr>
                                     <th colspan="8">
-                                        <button type="button" class="btn btn-primary btn-xs">
+                                        <button type="button" class="btn btn-primary btn-xs document-add-row">
                                             <i class="fa fa-plus"></i> Add row
                                         </button>
                                     </th>
@@ -391,7 +450,7 @@
                                 <td class="text-right">
                                     <select id="document-total-vat-percent" class="form-control input-sm"
                                             name="vat_percent">
-                                        <option value="9">0%</option>
+                                        <option value="0">0%</option>
                                         <option value="9">9%</option>
                                         <option value="20" selected>20%</option>
                                     </select>

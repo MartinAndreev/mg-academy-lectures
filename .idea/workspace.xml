@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/appication_htmls/document-form.html" line="396" />
+    <bookmark url="file://$PROJECT_DIR$/appication_htmls/document-form.html" line="455" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4b926bb-ded5-41b4-8b22-1a43940ecec1" name="Default" comment="" />
+    <list default="true" id="b4b926bb-ded5-41b4-8b22-1a43940ecec1" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/appication_htmls/assets/js/documents.js" afterPath="$PROJECT_DIR$/appication_htmls/assets/js/documents.js" />
+      <change beforePath="$PROJECT_DIR$/appication_htmls/document-form.html" afterPath="$PROJECT_DIR$/appication_htmls/document-form.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +24,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appication_htmls/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="-1596">
               <caret line="76" column="29" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="76" selection-end-column="29" />
               <folding>
                 <element signature="e#7138#7145#1" expanded="true" />
@@ -66,28 +70,28 @@
       <file leaf-file-name="document-form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appication_htmls/document-form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="355" column="62" lean-forward="true" selection-start-line="355" selection-start-column="62" selection-end-line="355" selection-end-column="62" />
+            <state relative-caret-position="427">
+              <caret line="398" column="55" lean-forward="true" selection-start-line="398" selection-start-column="55" selection-end-line="398" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="documents.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="documents.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appication_htmls/assets/js/documents.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="374">
+              <caret line="229" column="0" lean-forward="true" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appication_htmls/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+            <state relative-caret-position="563">
+              <caret line="80" column="1" lean-forward="false" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -103,6 +107,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>console</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -114,9 +123,9 @@
         <option value="$PROJECT_DIR$/appication_htmls/index.html" />
         <option value="$PROJECT_DIR$/appication_htmls/list.html" />
         <option value="$PROJECT_DIR$/appication_htmls/register.html" />
-        <option value="$PROJECT_DIR$/appication_htmls/assets/js/documents.js" />
-        <option value="$PROJECT_DIR$/appication_htmls/document-form.html" />
         <option value="$PROJECT_DIR$/appication_htmls/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/appication_htmls/document-form.html" />
+        <option value="$PROJECT_DIR$/appication_htmls/assets/js/documents.js" />
       </list>
     </option>
   </component>
@@ -168,6 +177,38 @@
               <item name="appication_htmls" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mg-academy-lectures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg-academy-lectures" type="462c0819:PsiDirectoryNode" />
+              <item name="appication_htmls" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg-academy-lectures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg-academy-lectures" type="462c0819:PsiDirectoryNode" />
+              <item name="appication_htmls" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg-academy-lectures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg-academy-lectures" type="462c0819:PsiDirectoryNode" />
+              <item name="lecture_12" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg-academy-lectures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg-academy-lectures" type="462c0819:PsiDirectoryNode" />
+              <item name="lecture_12" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mg-academy-lectures" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mg-academy-lectures" type="462c0819:PsiDirectoryNode" />
+              <item name="lecture_12" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -212,12 +253,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524655366219</updated>
-      <workItem from="1524655367420" duration="8060000" />
+      <workItem from="1524655367420" duration="18003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8060000" />
+    <option name="totallyTimeSpent" value="18003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="40" width="1920" height="1050" extended-state="6" />
@@ -270,25 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appication_htmls/assets/js/documents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appication_htmls/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="76" column="29" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="76" selection-end-column="29" />
-          <folding>
-            <element signature="e#7138#7145#1" expanded="true" />
-            <element signature="e#9780#9786#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appication_htmls/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -308,18 +330,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appication_htmls/document-form.html">
+    <entry file="file://$PROJECT_DIR$/appication_htmls/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="355" column="62" lean-forward="true" selection-start-line="355" selection-start-column="62" selection-end-line="355" selection-end-column="62" />
+        <state relative-caret-position="563">
+          <caret line="80" column="1" lean-forward="false" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appication_htmls/assets/css/style.css">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        <state relative-caret-position="552">
+          <caret line="3339" column="12" lean-forward="false" selection-start-line="3339" selection-start-column="12" selection-end-line="3339" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appication_htmls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1596">
+          <caret line="76" column="29" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="76" selection-end-column="29" />
+          <folding>
+            <element signature="e#7138#7145#1" expanded="true" />
+            <element signature="e#9780#9786#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appication_htmls/document-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="398" column="55" lean-forward="true" selection-start-line="398" selection-start-column="55" selection-end-line="398" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appication_htmls/assets/js/documents.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="229" column="0" lean-forward="true" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
           <folding />
         </state>
       </provider>
