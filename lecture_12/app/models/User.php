@@ -72,6 +72,7 @@ class User extends \App\Models\Core\Default_Object_Model {
         $this->session->unset_userdata('is_logged_in');
         $this->session->unset_userdata('user');
         $this->session->unset_userdata('ip_addres');
+        $this->session->unset_userdata('current_supplier');
         
         return true;
     }

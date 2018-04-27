@@ -180,4 +180,31 @@ class Customers extends App_Controller {
         redirect('customers');
     }
 
+    function find() {
+        $customers = new \App\Models\Contragents([
+            'user_id' => [User::getLoggedUser()->id],
+            'type' => [App\Models\Contragent::TYPE_CUSTOMER],
+            'search' => $this->input->get('term')
+        ]);
+
+        $formated = [];
+
+        while ($customers->haveRows()) {
+            $customer = $customers->theRow();
+
+            $formated[] = [
+                'id' => $customer->getid(),
+                'name' => $customer->getname(),
+                'value' => $customer->getname(),
+                'bulstat' => $customer->getbulstat(),
+                'city' => $customer->getcity(),
+                'country' => $customer->getcountry(),
+                'address' => $customer->getaddress(),
+                'mol' => $customer->getmol(),
+            ];
+        }
+
+        echo json_encode($formated);
+    }
+
 }

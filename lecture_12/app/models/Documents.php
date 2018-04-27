@@ -14,9 +14,9 @@ if (!defined('BASEPATH'))
  * @package com.www-you.cms.system.core
  * @copyright (c) 2016, Martin Andreev
  */
-class Contragents extends \App\Models\Core\Collection {
+class Documents extends \App\Models\Core\Collection {
 
-    protected $_table = 'contragents';
+    protected $_table = 'invoices';
     protected $_primaryKey = 'id';
 
     /**
@@ -30,17 +30,12 @@ class Contragents extends \App\Models\Core\Collection {
         'order' => 'asc',
         'user_id' => [],
         'type' => [],
-        'search' => '',
         'is_active' => ''
     );
 
     protected function _filterToSql() {
         if ($this->_params['is_active'] != '') {
             $this->_where['is_active'] = 'is_active = ' . (int) $this->_params['is_active'];
-        }
-
-        if ($this->_params['search'] != '') {
-            $this->_where['search'] = 'name LIKE "%' . $this->db->escape_like_str($this->_params['search']) . '%"';
         }
 
         if (is_array($this->_params['type']) && count($this->_params['type']) > 0) {
@@ -51,7 +46,7 @@ class Contragents extends \App\Models\Core\Collection {
             $this->_where['user_id'] = 'user_id IN (' . implode(',', array_map([$this->db, 'escape'], $this->_params['user_id'])) . ')';
         }
 
-        $this->_where = apply_filters('cotractors/query/where', $this->_where, $this->_params);
+        $this->_where = apply_filters('documents/query/where', $this->_where, $this->_params);
     }
 
     protected function _setOrder() {

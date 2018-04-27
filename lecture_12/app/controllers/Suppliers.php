@@ -180,4 +180,23 @@ class Suppliers extends App_Controller {
         redirect('suppliers');
     }
 
+    function change() {
+        if ($this->input->post()) {
+            $supplier = new App\Models\Contragent();
+            $exists = $supplier->find([
+                'user_id' => User::getLoggedUser()->id,
+                'type' => App\Models\Contragent::TYPE_SUPPLIER,
+                'id' => (int) $this->input->post('supplier')
+            ]);
+
+            if ($exists) {
+                $this->session->set_userdata([
+                    'current_supplier' => serialize($supplier)
+                ]);
+            }
+        }
+
+        redirect($_SERVER['HTTP_REFERER']);
+    }
+
 }

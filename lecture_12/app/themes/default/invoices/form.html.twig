@@ -1,0 +1,446 @@
+{% extends _layout %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header clearfix">
+                    <h1 class="pull-left">
+                        Create an invoice
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <form action="" method="post" class="" id="document-form">
+            <div class="row">
+                <div class="col-md-5 form-horizontal">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Customer info
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <input
+                                type="hidden"
+                                name="to_contragent_hash[id]"
+                                value="{{ form_data.to_contragent_hash.id }}"
+                                id="customer-id-input" />
+                            <div class="form-group">
+                                <label for="customer-name-input" class="col-sm-4 control-label control-label-sm">
+                                    Name <sup class="required">*</sup>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="customer-name-input"
+                                           name="to_contragent_hash[name]"
+                                           value="{{ form_data.to_contragent_hash.name }}"
+                                           autocomplete="off"
+                                           placeholder="Enter name for autocomplete">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-vat-input" class="col-sm-4 control-label control-label-sm">
+                                    VAT <sup class="required">*</sup>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="customer-vat-input"
+                                           value="{{ form_data.to_contragent_hash.bulstat }}"
+                                           name="to_contragent_hash[bulstat]"
+                                           placeholder="Enter name for autocomplete">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-city-input" class="col-sm-4 control-label control-label-sm">
+                                    City <sup class="required">*</sup>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="customer-city-input"
+                                           value="{{ form_data.to_contragent_hash.city }}"
+                                           name="to_contragent_hash[city]">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-country-input" class="col-sm-4 control-label control-label-sm">
+                                    Country
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="customer-country-input"
+                                           value="{{ form_data.to_contragent_hash.country }}"
+                                           name="to_contragent_hash[country]">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-address-input" class="col-sm-4 control-label control-label-sm">
+                                    Address
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="customer-address-input"
+                                           value="{{ form_data.to_contragent_hash.address }}"
+                                           name="to_contragent_hash[address]">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-mol-input" class="col-sm-4 control-label control-label-sm">
+                                    MOL
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="customer-mol-input"
+                                           value="{{ form_data.to_contragent_hash.mol }}"
+                                           name="to_contragent_hash[mol]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Invoice info
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="invoice-number-input"
+                                       class="control-label control-label-block text-center control-label-sm">
+                                    #
+                                </label>
+                                <input type="text" class="form-control input-sm text-center" disabled
+                                       id="invoice-number-input" placeholder="***********"
+                                       name="invoice_number">
+                            </div>
+                            <div class="form-group">
+                                <label for="invoice-date-input"
+                                       class="control-label control-label-block text-center control-label-sm">
+                                    Document date
+                                </label>
+                                <input type="text" class="form-control input-sm datepicker text-center" readonly
+                                       value="{{ form_data.invoice_date }}"
+                                       id="invoice-date-input"
+                                       name="invoice_date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 form-horizontal">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Supplier info
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <input
+                                type="hidden"
+                                value="{{ form_data.from_contragent_hash.id }}"
+                                name="from_contragent_hash[id]" />
+                            <div class="form-group">
+                                <label for="supplier-name-input" class="col-sm-4 control-label control-label-sm">
+                                    Name <sup class="required">*</sup>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="supplier-name-input"
+                                           readonly=""
+                                           value="{{ form_data.from_contragent_hash.name }}"
+                                           name="from_contragent_hash[name]"
+                                           placeholder="Enter name for autocomplete">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier-vat-input" class="col-sm-4 control-label control-label-sm">
+                                    VAT <sup class="required">*</sup>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="supplier-vat-input"
+                                           readonly=""
+                                           value="{{ form_data.from_contragent_hash.bulstat }}"
+                                           name="from_contragent_hash[bulstat]"
+                                           placeholder="Enter name for autocomplete">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier-city-input" class="col-sm-4 control-label control-label-sm">
+                                    City <sup class="required">*</sup>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="supplier-city-input"
+                                           value="{{ form_data.from_contragent_hash.city }}"
+                                           readonly=""
+                                           name="from_contragent_hash[city]">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier-country-input" class="col-sm-4 control-label control-label-sm">
+                                    Country
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="supplier-country-input"
+                                           value="{{ form_data.from_contragent_hash.country }}"
+                                           readonly=""
+                                           name="from_contragent_hash[country]">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier-address-input" class="col-sm-4 control-label control-label-sm">
+                                    Address
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="supplier-address-input"
+                                           readonly=""
+                                           value="{{ form_data.from_contragent_hash.address }}"
+                                           name="from_contragent_hash[address]">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier-mol-input" class="col-sm-4 control-label control-label-sm">
+                                    MOL
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm" id="supplier-mol-input"
+                                           value="{{ form_data.from_contragent_hash.mol }}"
+                                           readonly=""
+                                           name="from_contragent_hash[mol]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Document rows
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered document-goods-row" id="document-goods">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">
+                                            #
+                                        </th>
+                                        <th rowspan="2">
+                                            Good
+                                        </th>
+                                        <th rowspan="2">
+                                            Quantity
+                                        </th>
+                                        <th rowspan="2">
+                                            Single price
+                                        </th>
+                                        <th colspan="2">
+                                            Discount
+                                        </th>
+                                        <th rowspan="2">
+                                            Total
+                                        </th>
+                                        <th rowspan="2"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>%</th>
+                                        <th>Fixed</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="goods-row goods-initial-row">
+                                        <td class="goods-row-number">
+                                            <span class="badge">1</span>
+                                        </td>
+                                        <td class="goods-row-goods">
+                                            <input type="hidden"
+                                                   name="goods[##][good_id]" class="goods-row-id-input">
+                                            <input type="text" class="form-control input-sm goods-autocomplete goods-row-name-input"
+                                                   name="goods[##][name]" tabindex="30"
+                                                   placeholder="Enter a goods name or sku for autocomplete">
+                                        </td>
+                                        <td class="goods-row-quantity">
+                                            <input type="text" class="form-control input-sm"
+                                                   tabindex="31"
+                                                   name="goods[##][quantity]"
+                                                   value="0">
+                                        </td>
+                                        <td class="goods-row-price">
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control input-sm" name="goods[##][price]"
+                                                       tabindex="32"
+                                                       value="0">
+                                                <span class="input-group-addon">BGN</span>
+                                            </div>
+                                        </td>
+                                        <td class="goods-row-discount-percent">
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control input-sm"
+                                                       tabindex="33"
+                                                       name="goods[##][discount_percent]"
+                                                       value="0">
+                                                <span class="input-group-addon">%</span>
+                                            </div>
+                                        </td>
+                                        <td class="goods-row-discount-ammount">
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control input-sm"
+                                                       tabindex="34"
+                                                       name="goods[##][discount_ammount]"
+                                                       value="0">
+                                                <span class="input-group-addon">BGN</span>
+                                            </div>
+                                        </td>
+                                        <th class="goods-row-total">
+                                            <span>0</span> BGN
+                                        </th>
+                                        <th class="goods-row-actions">
+                                            <button class="btn btn-danger goods-row-remove-row btn-xs" type="button">
+                                                <i class="fa fa-remove"></i>
+                                            </button>
+                                        </th>
+                                    </tr>
+                                    {% for index, good in form_data.goods %}
+                                        <tr class="goods-row">
+                                            <td class="goods-row-number">
+                                                <span class="badge">{{ index + 1 }}</span>
+                                            </td>
+                                            <td class="goods-row-goods">
+                                                <input type="hidden"
+                                                       name="goods[{{ index }}][id]"
+                                                       value="{{ good.id }}"
+                                                       class="goods-row-id-input">
+                                                <input type="text" class="form-control input-sm goods-autocomplete goods-row-name-input"
+                                                       name="goods[{{ index }}][name]" tabindex="30"
+                                                       value="{{ good.name }}"
+                                                       placeholder="Enter a goods name or sku for autocomplete">
+                                            </td>
+                                            <td class="goods-row-quantity">
+                                                <input type="text" class="form-control input-sm"
+                                                       tabindex="31"
+                                                       name="goods[{{ good.quantity }}][quantity]"
+                                                       value="{{ good.quantity }}"
+                                                       >
+                                            </td>
+                                            <td class="goods-row-price">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control input-sm" name="goods[{{ index }}][price]"
+                                                           tabindex="32"
+                                                           value="{{ good.price }}">
+                                                    <span class="input-group-addon">BGN</span>
+                                                </div>
+                                            </td>
+                                            <td class="goods-row-discount-percent">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control input-sm"
+                                                           tabindex="33"
+                                                           name="goods[{{ index }}][discount_percent]"
+                                                           value="{{ good.discount_percent }}">
+                                                    <span class="input-group-addon">%</span>
+                                                </div>
+                                            </td>
+                                            <td class="goods-row-discount-ammount">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control input-sm"
+                                                           tabindex="34"
+                                                           name="goods[{{ index }}][discount_ammount]"
+                                                           value="{{ good.discount_ammount }}">
+                                                    <span class="input-group-addon">BGN</span>
+                                                </div>
+                                            </td>
+                                            <th class="goods-row-total">
+                                                <span>0</span> BGN
+                                            </th>
+                                            <th class="goods-row-actions">
+                                                <button class="btn btn-danger goods-row-remove-row btn-xs" type="button">
+                                                    <i class="fa fa-remove"></i>
+                                                </button>
+                                            </th>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="8">
+                                            <button type="button" class="btn btn-primary btn-xs document-add-row">
+                                                <i class="fa fa-plus"></i> Add row
+                                            </button>
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 pull-right">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                Document totals
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered" id="document-total-wrapper">
+                                <tr>
+                                    <th class="text-right">
+                                        Vat %
+                                    </th>
+                                    <td class="text-right">
+                                        <select id="document-total-vat-percent" class="form-control input-sm"
+                                                name="vat_percent">
+                                            <option value="0">0%</option>
+                                            <option value="9">9%</option>
+                                            <option value="20" selected>20%</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-right">
+                                        Vat
+                                    </th>
+                                    <td class="text-right">
+                                        <span id="document-total-vat">0</span> BGN
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-right">
+                                        Total without vat
+                                    </th>
+                                    <td class="text-right">
+                                        <span id="document-total-no-vat">0</span> BGN
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-right">
+                                        Total
+                                    </th>
+                                    <td class="text-right">
+                                        <span id="document-total">0</span> BGN
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-right" colspan="2">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            Save
+                                        </button>
+                                    </th>
+                                </tr>
+                            </table>
+
+                            {% if errors %}
+                                <div class="alert alert-danger">
+                                    {% for error in errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <script type="text/javascript" src="{{ base_url('public/assets/js/documents.js') }}"></script>
+{% endblock %}

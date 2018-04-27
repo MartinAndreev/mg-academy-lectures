@@ -10,8 +10,11 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
               integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
         <!-- Bootstrap -->
         <link href="{{ base_url('public/assets/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
+
+        <link href="{{ base_url('public/assets/plugins/datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet">
         <link href="{{ base_url('public/assets/css/style.css') }}" rel="stylesheet">
 
         <!-- Bootstrap -->
@@ -56,7 +59,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">Invoice</a>
+                                        <a href="{{ site_url('invoices') }}">Invoice</a>
                                     </li>
                                     <li>
                                         <a href="#">Credit note</a>
@@ -78,14 +81,26 @@
                                         <a href="{{ site_url('customers') }}">Customers</a>
                                     </li>
                                     <li>
-                                        <a href="#">Goods</a>
+                                        <a href="{{ site_url('goods') }}">Goods</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#"></a>
+                            <li id="suppliers-list">
+                                <form style="margin-top: 10px;" action="{{ site_url('suppliers/change') }}" method="post" class="form-inline">
+                                    <select name="supplier" class="form-control input-sm">
+                                        {% for id, supplier in suppliers %}
+                                            <option {% if current_supplier.get('id') == id %} selected {% endif %} value="{{ id }}">
+                                                {{ supplier }}
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+
+                                    <button type="submit" class="btn btn-primery btn-sm">
+                                        Change
+                                    </button>
+                                </form>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -109,9 +124,17 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
+        <script type="text/javascript">
+            var ajax = {
+                url: '{{ base_url('') }}'
+            };
+        </script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="{{ base_url('public/assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ base_url('public/assets/plugins/datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 
         {% block footer %}
         {% endblock %}

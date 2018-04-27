@@ -1,0 +1,68 @@
+{% extends _layout %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header clearfix">
+                    <h1 class="pull-left">
+                        Customers
+                        <small>{{ action }}</small>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="" method="post" id="register-form" class="form-horizontal">
+                    <div class="panel panel-default">
+                        <div class="panel panel-heading">
+                            <h2 class="panel-title">
+                                {{ action }}
+                            </h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="name-input" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input value="{{ form_data.name }}" type="text" class="form-control" id="name-input" name="name"
+                                           placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="price-input" class="col-sm-2 control-label">Price</label>
+                                <div class="col-sm-10">
+                                    <input value="{{ form_data.price }}" type="text" class="form-control" id="price-input" name="price"
+                                           placeholder="Price">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="is-active-input" class="col-sm-2 control-label">Is active?</label>
+                                <div class="col-sm-10">
+                                    <label class="checkbox-inline">
+                                        <input type="hidden" name="is_active" value="0" />
+                                        <input {% if form_data.is_active %} checked {% endif %} type="checkbox" value="1" id="is-active-input"
+                                                                            name="is_active"> Yes
+                                    </label>
+                                </div>
+                            </div>
+
+                            {% if errors %}
+                                <div class="alert alert-danger">
+                                    {% for error in errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="panel-footer text-right">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends _layout %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header clearfix">
+                    <h1 class="pull-left">
+                        Goods
+                        <small>List of all the goods</small>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <h2 class="panel-title pull-left">
+                            Goods
+                        </h2>
+
+                        <div class="btn-group pull-right">
+                            <a href="{{ site_url('customers/export') }}" class="btn btn-primary btn-xs">
+                                <i class="fa fa-download"></i> Export to xls
+                            </a>
+                            <a href="{{ site_url('goods/add') }}" class="btn btn-success btn-xs">
+                                <i class="fa fa-plus"></i> Create a good
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        {{ table.render() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

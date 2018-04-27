@@ -7,6 +7,7 @@ class Contragent extends \App\Models\Core\Default_Object_Model {
     const TYPE_CUSTOMER = 'customer';
     const TYPE_SUPPLIER = 'supplier';
 
+    static protected $_cache = [];
     protected $_oldRow = null;
     protected $_protected = ['user_id'];
 
@@ -70,6 +71,53 @@ class Contragent extends \App\Models\Core\Default_Object_Model {
 
     protected function beforeSave() {
         $this->_data['updated_on'] = strtotime('now');
+    }
+
+    static function getCurrent() {
+        $ci = & get_instance();
+        $supplier = $ci->session->userdata('current_supplier');
+        
+        if ($supplier && unserialize($supplier) instanceof Contragent) {
+            return unserialize($supplier);
+        }
+
+        $supplier = new Contragent();
+        $exists = $supplier->find([
+            'type' => self::TYPE_SUPPLIER,
+            'user_id' => User::getLoggedUser()->id
+        ]);
+
+        if ($exists) {
+            $ci->session->set_userdata([
+                'current_supplier' => serialize($supplier)
+            ]);
+
+            return $supplier;
+        }
+
+        return false;
+    }
+
+    static function getSuppliers() {
+
+        if (isset(self::$_cache['suppiers'])) {
+            return self::$_cache['suppiers'];
+        }
+
+        self::$_cache['suppiers'] = [];
+
+        $suppliers = new Contragents([
+            'type' => [self::TYPE_SUPPLIER],
+            'user_id' => [User::getLoggedUser()->id]
+        ]);
+
+        while ($suppliers->haveRows()) {
+            $supplier = $suppliers->theRow();
+
+            self::$_cache['suppiers'][$supplier->getid()] = $supplier->getname();
+        }
+
+        return self::$_cache['suppiers'];
     }
 
 }
